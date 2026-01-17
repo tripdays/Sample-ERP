@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailHub - Sales & POS</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>RetailHub</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="sales.html" class="active">Sales</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <h1>Sales & Point of Sale</h1>
+                </div>
+                <div class="top-bar-right">
+                    <button class="btn btn-primary">🧾 New Invoice</button>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="sales-grid">
+                    <div class="card pos-panel">
+                        <h2>POS Terminal</h2>
+                        <div class="pos-search">
+                            <input type="text" placeholder="Scan barcode or search product..." class="search-box">
+                        </div>
+
+                        <h3>Cart Items</h3>
+                        <table class="pos-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Laptop - Dell XPS (Silver)</td>
+                                    <td><input type="number" value="1" class="qty-input"></td>
+                                    <td>$1,200</td>
+                                    <td>$1,200</td>
+                                    <td><button class="btn-small btn-danger">Remove</button></td>
+                                </tr>
+                                <tr>
+                                    <td>T-Shirt - Cotton (M, Red)</td>
+                                    <td><input type="number" value="3" class="qty-input"></td>
+                                    <td>$25</td>
+                                    <td>$75</td>
+                                    <td><button class="btn-small btn-danger">Remove</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card billing-panel">
+                        <h2>Billing Summary</h2>
+                        
+                        <div class="billing-section">
+                            <label for="customer">Customer</label>
+                            <select id="customer" class="form-control">
+                                <option>Walk-in Customer</option>
+                                <option>John Doe (Member #1001)</option>
+                                <option>Jane Smith (Member #1002)</option>
+                            </select>
+                        </div>
+
+                        <div class="billing-summary-box">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span>$1,275</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Discount:</span>
+                                <input type="number" value="0" class="summary-input" step="0.01">
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (GST 18%):</span>
+                                <span>$229.50</span>
+                            </div>
+                            <hr>
+                            <div class="summary-row total">
+                                <span>Total Amount:</span>
+                                <span>$1,504.50</span>
+                            </div>
+                        </div>
+
+                        <div class="payment-section">
+                            <label for="payment-method">Payment Method</label>
+                            <select id="payment-method" class="form-control">
+                                <option>Cash</option>
+                                <option>Card</option>
+                                <option>Digital Wallet</option>
+                                <option>Cheque</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary btn-block">Complete Payment</button>
+                        <button class="btn btn-secondary btn-block">Print Receipt</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Recent Invoices</h2>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Invoice #</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Payment Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INV-2026-0001</td>
+                                <td>Walk-in</td>
+                                <td>01/17/2026</td>
+                                <td>$580</td>
+                                <td><span class="badge badge-success">Paid</span></td>
+                                <td>
+                                    <button class="btn-small">View</button>
+                                    <button class="btn-small">Print</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INV-2026-0002</td>
+                                <td>John Doe</td>
+                                <td>01/17/2026</td>
+                                <td>$1,250</td>
+                                <td><span class="badge badge-success">Paid</span></td>
+                                <td>
+                                    <button class="btn-small">View</button>
+                                    <button class="btn-small">Print</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INV-2026-0003</td>
+                                <td>Jane Smith</td>
+                                <td>01/16/2026</td>
+                                <td>$340</td>
+                                <td><span class="badge badge-success">Paid</span></td>
+                                <td>
+                                    <button class="btn-small">View</button>
+                                    <button class="btn-small">Print</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2>Loyalty Program</h2>
+                    <form class="loyalty-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="loyalty-phone">Customer Phone</label>
+                                <input type="tel" id="loyalty-phone" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="loyalty-email">Email</label>
+                                <input type="email" id="loyalty-email" placeholder="customer@example.com">
+                            </div>
+                            <button type="button" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

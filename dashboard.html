@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailHub - Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>RetailHub</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="purchase.html">Purchase</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="top-bar-right">
+                    <span class="user-info">Welcome, Admin User</span>
+                    <button class="btn-icon">⚙️</button>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Total Products</p>
+                            <h3 class="stat-value">1,247</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Low Stock Items</p>
+                            <h3 class="stat-value">23</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Today's Sales</p>
+                            <h3 class="stat-value">$4,520</h3>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-info">
+                            <p class="stat-label">Pending POs</p>
+                            <h3 class="stat-value">8</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h2>Quick Actions</h2>
+                        <div class="quick-actions">
+                            <button class="action-btn">➕ Add Product</button>
+                            <button class="action-btn">📦 Create PO</button>
+                            <button class="action-btn">🧾 New Invoice</button>
+                            <button class="action-btn">📊 View Report</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Recent Transactions</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TXN001</td>
+                                    <td>Sale</td>
+                                    <td>$580</td>
+                                    <td>Today</td>
+                                </tr>
+                                <tr>
+                                    <td>TXN002</td>
+                                    <td>Purchase</td>
+                                    <td>$2,100</td>
+                                    <td>Today</td>
+                                </tr>
+                                <tr>
+                                    <td>TXN003</td>
+                                    <td>Sale</td>
+                                    <td>$340</td>
+                                    <td>Yesterday</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Monthly Sales Trend</h2>
+                    <div class="chart-placeholder">
+                        <p>📈 Sales chart would be displayed here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
